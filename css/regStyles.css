@@ -1,0 +1,104 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+    display: block;
+}
+
+
+#img-container {
+    top: 1em;
+    right: 1em;
+    position: fixed;
+    width: 20vw;
+    opacity: 0.9;
+    z-index: 100;
+}
+
+#dark {
+    position: absolute;
+    height: 11.62vw;
+    width: 100%;
+    top: 11.62vw;
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0.7) 60%, transparent);
+    border-radius: 1.66vw 6.64vw;
+    -webkit-border-radius: 1.66vw 6.64vw;
+    -moz-border-radius: 1.66vw 6.64vw;
+    -ms-border-radius: 1.66vw 6.64vw;
+    -o-border-radius: 1.66vw 6.64vw;
+}
+#watching {
+    font-style:italic;
+    color: rgb(255 255 255 / 0.7);
+    top:19vw;
+    left: 3vw;
+}
+#watching,
+#img-container img {
+    position: absolute;
+}
+#cat-body,
+#cat-head-watching,
+#cat-head-cool {
+    width: 19.92vw;
+    top: 0;
+    left: 0;
+}
+#cat-body {
+    filter: drop-shadow(-0.2em -0.2em 0.5em rgb(242, 240, 226, 0.8));
+    -webkit-filter: drop-shadow(-0.2em -0.2em 0.5em rgb(242, 240, 226, 0.8));
+}
+.eye {
+    opacity: 1;
+    width: 3.57vw;
+    position: absolute;
+}
+.eye-left {
+    top: 4.73vw;
+    left: 8.55vw;
+}
+.eye-right {
+    top: 4.81vw;
+    right: 3.98vw;
+}
+#cat-head-cool {
+    opacity: 0;
+    animation: blink 7s infinite;
+    -webkit-animation: blink 7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 1;
+    }
+    8% { 
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+
+#hero-cat {
+    filter: hue-rotate(340deg);
+    -webkit-filter: hue-rotate(340deg);
+}

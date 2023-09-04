@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- logo for browser tab -->
+    <link rel="icon" type="image/png" href="./logos/jcacmLogo400.png"> 
+
+<!-- link to bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">  
+
+<!-- instead of linking straight to the bootstrap styles, they are imported into the below css file via sass in order to customize variables -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link href="./css/style.min.css" rel="stylesheet">
+
+    <link href="./css/regStyles.css" rel="stylesheet">
+
+
+    <title>codeOrElse.com</title>
+</head>
+<body>
+    <header class="text-center py-4 bg-primary bg-gradient">
+        <a href="./index.html" class="btn navbar-brand" role="button">
+            <span class="text-light">return home to</span>
+            <i class="bi bi-code-square text-secondary"></i>
+            <span class="text-altlight display-6"> codeOrElse.com</span>
+        </a>
+    </header>
+    <div id="img-container">
+        <div id="dark"></div>
+        <img src="./assets/body-only.png" alt="cat body" id="cat-body">
+        <img src="./assets/eye-left.png" alt="cat eyes" class="eye eye-left">
+        <img src="./assets/eye-right.png" alt="cat eyes" class="eye eye-right">
+        <img src="./assets/head-no-eyes.png" alt="watching cat head" id="cat-head-watching">
+        <img src="./assets/head-squinty.png" alt="cool cat head" id="cat-head-cool">
+<!-- for some reason I cannot get ::before or ::after pseudo elements to work with bootstrap, I stopped looking for an answer and used a div -->
+        <p id="watching">We'll be watching you...</p>
+    </div>
+
+    <!-- pricing -->
+    <section id="pricing" class="bg-altdark bg-gradient py-5 text-danger">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2>Pricing Plans</h2>
+                <p class="lead text-muted">Choose a pricing plan to suit your motivational needs.</p>
+            </div>
+            <div class="row my-5 align-items-center justify-content-center g-2">
+                <div class="col-8 col-lg-4 col-xl-3">
+                    <div class="card border-0 shadow">
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title">Starter Pack</h4>
+                            <p class="lead card-subtitle">Dabble before you dive.</p>
+                            <p class="display-6 my-4 text-primary fw-bold">$9.99/mo</p>
+                            <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#sign-up" class="btn btn-outline-primary btn-lg mt-3">Buy Meow!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 col-lg-4">
+                    <div class="card border-danger border-2 shadow">
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title display-6 fw-bold">Militant Pack</h4>
+                            <p class="text-info card-subtitle fst-italic">***Most Popular***</p>
+                            <p class="lead card-subtitle fw-bold">Activate God Mode.</p>
+                            <p class="display-6 my-4 text-primary fw-bold">$999.99/mo</p>
+                            <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#sign-up" class="btn btn-outline-danger btn-lg mt-3">Buy Meow!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-lg-4 col-xl-3">
+                    <div class="card border-0 shadow">
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title">Aggressive Pack</h4>
+                            <p class="lead card-subtitle">Level up your game.</p>
+                            <p class="display-6 my-4 text-primary fw-bold">$99.99/mo</p>
+                            <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#sign-up" class="btn btn-outline-warning btn-lg mt-3">Buy Meow!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- sign-up section with form -->
+    <section id="sign-up" class="py-5 bg-light bg-gradient">
+        <div class="container-lg position-relative">
+            <img src="./assets/bread-cat.png" alt="in bread-cat" class="img-fluid object-fit-cover opacity-25 position-absolute" style="pointer-events: none;">
+            <div class="text-center">
+                <h2 id="sign-up-h2" class="text-danger">Sign Up and Change Your Life!</h2>
+                <p id="sign-up-p" class="lead">Fill out the form and you'll on your way to coding greatness!</p>
+            </div>
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-6">
+                    <form>
+                        <label for="fullname" id="name-label" class="form-label">Enter Full Name</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="e.g. Gary Snuggles Fluffypants" aria-label="Full Name" aria-describedby="name-label">
+                        <label for="email" id="email-label" class="form-label">Enter Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="e.g. GareBear@example.com">
+                        <label for="address" id="address-label" class="form-label">Enter Complete Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="e.g. 123 Feline St., Catville, Ma 01520">
+                        <label for="phone" id="phone-label" class="form-label">Enter Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="e.g. 212-555-2368">
+                        <label for="username" id="user-label" class="form-label mt-2">
+                            Choose a Username:
+                        </label>
+                        <div class="input-group my-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="user"><i class="bi bi-person-fill"></i></span>
+                            </div>
+                            <input type="text" class="form-control bg-transparent" id="username" placeholder="Username" aria-label="Username" aria-describedby="user-label" required>
+                        </div>
+                        <label for="password" id="password-label" class="form-label">
+                            Choose your Password
+                        </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="lock"><i class="bi bi-person-fill-lock"></i></span>
+                            </div>
+                            <input type="text" class="form-control bg-transparent" id="password" placeholder="e.g. 5%234hdsE!14" aria-label="Password" aria-describedby="password-label" required>
+                        </div>
+                        <label for="plan" id="plan-label" class="form-label mt-5">Choose your motivational plan:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="bi bi-fire"></i>
+                                </span>
+                            </div>
+                            <select name="plan" id="plan" class="form-select" aria-label="Plan Choice" aria-describedby="plan-label">
+                                <option value="militant">Militant Pack</option>
+                                <option value="aggressive">Aggressive Pack</option>
+                                <option value="starter">Starter Pack</option>
+                            </select>
+                        </div>
+                        <div class="form-floating my-5">
+                            <textarea name="goals" id="goals" cols="30" rows="10" class="form-control" style="height: 140px" aria-label="Your goals" aria-describedby="goals-label"></textarea>
+                            <label for="goals" id="goal-label">What are your goals with this program?</label>
+                        </div>
+                        <div class="mb-4 text-center">
+                            <button type="submit" class="btn btn-lg btn-danger" id="new-member-btn">Let's Get Coding!<br><small><em>or else!</small></em></button>
+                        </div>
+                    </form>
+                </div>
+                <button type="button" class="btn btn-lg border-primary btn-altlight d-none" id="change-btn">Update Info</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="latest" class="text-center">
+        <h2>Our most recent members!</h2>
+        <button type="button" class="btn btn-altlight bg-transparent border-0 text-muted" id="newest-members-btn">Welcome our newest members!</button>
+        <div class="table-responsive p-5">
+            <table class="table caption-top table-secondary table-hover table-sm">
+                <!-- <caption class="display-6 text-center text-primary">Contacts</caption> -->
+                <thead class="table-danger">
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Plan</th>
+                    <th scope="col">Goals</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+              </table>
+
+        </div>
+    </section>
+
+    <footer class="text-center text-muted fs-6 bg-altlight py-2">
+        <p> codeOrElse.com &copy2053</p>
+    </footer>
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js" type="module"></script>
+    <script src="./script.js" ></script>
+    
+</body>
+</html>

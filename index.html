@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- logo for browser tab -->
+    <link rel="icon" type="image/png" href="./logos/jcacmLogo400.png"> 
+
+<!-- instead of linking straight to the bootstrap styles, they are imported into the below css file via sass in order to customize variables -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link href="./css/style.min.css" rel="stylesheet">
+    
+    <link href="./css/regStyles.css" rel="stylesheet">
+
+<!-- link to bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">  
+
+    <title>codeOrElse.com</title>
+</head>
+<body class="bg-body-bg bg-gradient" data-bs-spy="scroll" data-bs-target="#main-nav">
+    <!-- <h1 class="text-altdark text-center">Hello</h1> -->
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary bg-gradient fixed-top shadow-sm" id="main-nav">
+            <div class="container-xxl">
+                <a href="#home" class="navbar-brand">
+                    <i class="bi bi-code-square text-secondary"></i>
+                    <span class="fw-bold text-altlight">codeOrElse.com</span>
+                </a>
+                <!-- burger menu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="toggle navigation menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- nav links -->
+                <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a href="#home" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#methods" class="nav-link">Our Methods</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#reviews" class="nav-link">Stellar Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item d-md-none">
+                            <a href="#pricing" class="nav-link">Pricing Plans</a>
+                        </li>
+                        <li class="nav-item ms-2 d-none d-md-inline">
+                            <a href="./signup.html" class="btn btn-altlight rounded-pill shadow-lg bg-gradient">Sign Up Meow!</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+            <!-- hero -->
+    <section id="home" class="py-5 mt-5">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 text-center text-md-start">
+                    <h1>
+                        <div class="pb-1 display-2 fw-semibold text-primary">Code...<br> Or else.</div>
+                        <div class="pb-4 display-6 text-muted">Learn to code quickly...<span class="display-6">or else.</span></div>
+                    </h1>
+                    <!-- <p class="lead my-4 text-muted">Our method is clinically proven to motivate anyone to learn coding at lightning speed...or else you might end up in a clinic.</p> -->
+                    <a href="./signup.html" class="btn btn-danger btn-lg">Get Coding Right Meow!</a>
+                    <!-- trigger for offcanvas sidebar -->
+                    <a href="#sidebar" class="d-block mt-3 text-decoration-none" data-bs-toggle="offcanvas" role="button" aria-controls="sidebar">See our other Programs</a>
+                </div>
+                <div class="col-md-5 text-center d-none d-md-block">
+                    <!-- <span class="ttip" data-bs-placement="top" title="this cat don't play"></span> -->
+                    <img class="img-fluid rounded-5 shadow-lg opacity-75" id="hero-cat" src="./assets/cat-stare-angry.png" alt="angry cat stare" title="this cat don't play">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+        <!-- methods section with accordion component -->
+        <section id="methods" class="py-5">
+            <div class="container-md">
+                <div class="text-center">
+                    <h2 class="display-5 text-primary">Our Proven Methods</h2>
+                    <p class="lead text-muted">
+                        A quick glance at the award-winning services that you'll receive.
+                    </p>
+                    <p class="fw-light my-4 text-muted" id="method-p">Our method is clinically proven to motivate anyone to learn coding at lightning speed<br>...or else you might end up in a clinic.</p>
+                </div>
+                <div class="row my-5 justify-content-around align-items-center">
+                    <div class="col-6 col-lg-4">
+                        <img src="./assets/cat-stare.jpg" class="rounded-5 shadow img-fluid opacity-75" alt="intensely focused cat stare" title="Yes. He's watching your every move.">
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- accordion -->
+                        <div class="accordian" id="methods">
+                            <!-- accordian item 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-1">
+                                    <button class="accordion-button text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#method-1" aria-expanded="true" aria-controls="method-1">
+                                        Method 1: Clear Objectives
+                                    </button>
+                                </h2>
+                                <div class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#methods" id="method-1">
+                                    <div class="accordion-body">
+                                        <p>Our staff will meet with you and your family to hammer out clear objectives and timelines. Deadlines will be in print, on calendars, in your calendar apps, and scratched very finely into your eyeballs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordian item 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-2">
+                                    <button class="accordion-button text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#method-2" aria-expanded="true" aria-controls="method-2">
+                                        Method 2: Accountability
+                                    </button>
+                                </h2>
+                                <div class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#methods" id="method-2">
+                                    <div class="accordion-body">
+                                        <p>In addition to having a staff member onsite in your home, we will also gain access to all of your email addresses, social media accounts, and phone apps to make sure you are always on target for the next goal deadline.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordian item 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-3">
+                                    <button class="accordion-button text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#method-3" aria-expanded="true" aria-controls="method-3">
+                                        Method 3: Financial Re-purr-cusions
+                                    </button>
+                                </h2>
+                                <div class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#methods" id="method-3">
+                                    <div class="accordion-body">
+                                        <p>Per our 100-page contract, only we reserve the ability to cancel your membership payments, and only once you have completed all objectives. If you are falling behind, we will automatically bump you up to the next payment tier. The longer you take to learn to code, the more money we take out of your accounts(which we will also gain full access to).</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordian item 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-4">
+                                    <button class="accordion-button text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#method-4" aria-expanded="true" aria-controls="method-4">
+                                        Method 4: Harrassment & Stalking
+                                    </button>
+                                </h2>
+                                <div class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#methods" id="method-4">
+                                    <div class="accordion-body">
+                                        <p>We have several tools in our arsenal to get you back on track if you fall behind. Our patented Secret Agent Cats will be watching you and your family's every move, all day, everyday, and making sure YOU know it while earning your family's trust and affection. If you miss a deadline, we be around every corner, behind every bush, calling you, your family, and your boss incessantly, not letting you sleep and interrupting every attempt to eat, until you have caught up to your coding objectives.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordion item 5 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-5">
+                                    <button class="accordion-button text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#method-5" aria-expanded="true" aria-controls="method-5">
+                                        Method 5: Near-Death Therapy
+                                    </button>
+                                </h2>
+                                <div class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#methods" id="method-5">
+                                    <div class="accordion-body">
+                                        <p>We feel that when people think they want to give up, that they really just need a "push" in the right direction to make some changes...if you know what I mean.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- reviews section with list group -->
+        <section id="reviews" class="bg-secondary bg-gradient py-5">
+            <div class="container-lg">
+                <div class="text-center">
+                    <h2>
+                        <i class="bi bi-stars"></i>
+                        Reviews of codeOrElse
+                    </h2>
+                    <p class="lead">What our clients have to say about codeOrElse...</p>
+                </div>
+            </div>
+
+            <!-- list in a grid with bootstrap icons -->
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-8">
+                    <div class="list-group bg-light bg-gradient">
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <h5 class="mb-1">"I never knew I could do anything that fast"</h5>
+                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas officia consequatur velit ipsa numquam voluptatem quaerat natus, libero eligendi officiis!</p>
+                            <small>Review by Steve</small>
+                        </div>
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <h5 class="mb-1">"I didn't sleep for three weeks"</h5>
+                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas officia consequatur velit ipsa numquam voluptatem quaerat natus, libero eligendi officiis!</p>
+                            <small>Review by Lorem</small>
+                        </div>
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <h5 class="mb-1">"My family was crying every day"</h5>
+                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas officia consequatur velit ipsa numquam voluptatem quaerat natus, libero eligendi officiis!</p>
+                            <small>Review by Ipsum</small>
+                        </div>
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <h5 class="mb-1">"I got a great job, with great therapy benefits"</h5>
+                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas officia consequatur velit ipsa numquam voluptatem quaerat natus, libero eligendi officiis!</p>
+                            <small>Review by Taylor Swift</small>
+                        </div>
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <h5 class="mb-1">"I signed up on a dare...learned my lesson"</h5>
+                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas officia consequatur velit ipsa numquam voluptatem quaerat natus, libero eligendi officiis!</p>
+                            <small>Review by Emmett</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- pricing section with cards -->
+        <section id="pricing" class="bg-altlight bg-gradient py-5">
+            <div class="container-lg">
+                <div class="text-center">
+                    <h2>Pricing Plans</h2>
+                    <p class="lead text-muted">Choose a pricing plan to suit your motivational needs.</p>
+                </div>
+                <div class="row my-5 align-items-center justify-content-center g-2">
+                    <div class="col-8 col-lg-4 col-xl-3">
+                        <div class="card border-0 shadow">
+                            <div class="card-body text-center py-4">
+                                <h4 class="card-title">Starter Pack</h4>
+                                <p class="lead card-subtitle">Dabble before you dive.</p>
+                                <p class="display-6 my-4 text-primary fw-bold">$9.99/mo</p>
+                                <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <a href="./signup.html" class="btn btn-outline-info btn-lg mt-3">Buy Meow!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-9 col-lg-4">
+                        <div class="card border-danger border-2 shadow">
+                            <div class="card-body text-center py-4">
+                                <p class="text-warning card-header bg-primary bg-gradient fst-italic">***Most Popular***</p>
+                                <h4 class="card-title display-6 fw-bold">Militant Pack</h4>
+                                <p class="lead card-subtitle fw-bold">Activate God Mode.</p>
+                                <p class="display-6 my-4 text-primary fw-bold">$999.99/mo</p>
+                                <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <a href="./signup.html" class="btn btn-outline-danger btn-lg mt-3">Buy Meow!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-4 col-xl-3">
+                        <div class="card border-0 shadow">
+                            <div class="card-body text-center py-4">
+                                <h4 class="card-title">Aggressive Pack</h4>
+                                <p class="lead card-subtitle">Level up your game.</p>
+                                <p class="display-6 my-4 text-primary fw-bold">$99.99/mo</p>
+                                <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <a href="./signup.html" class="btn btn-outline-warning btn-lg mt-3">Buy Meow!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- contact section with table -->
+        <section id="contact" class="py-5">
+            <!-- add branded social links -->
+            <h2 class="text-center text-primary pb-3">Connect with us meow!</h2>
+            <div class="text-center justify-content-center row">
+                <!-- Facebook -->
+                <a style="color: #3b5998;" class="col-2" href="#!" role="button">
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                </a>
+                
+                <!-- Twitter -->
+                <a style="color: #55acee;" class="col-2" href="#!" role="button">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+                
+                <!-- Google -->
+                <a style="color: #dd4b39;" class="col-2" href="#!" role="button">
+                    <i class="fab fa-google fa-lg"></i>
+                </a>
+                
+                <!-- Instagram -->
+                <a style="color: #ac2bac;" class="col-2" href="#!" role="button">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+            </div>
+            <div class="table-responsive p-5">
+                <table class="table caption-top table-secondary table-hover table-sm">
+                    <caption class="display-6 text-center text-primary">Contacts</caption>
+                    <thead class="table-danger">
+                      <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">email</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">CEO</th>
+                        <td>Bumble</td>
+                        <td>Brump</td>
+                        <td>im.the.chosen.one.yesisaidthatirl@codeorelse.com</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">CFO</th>
+                        <td>Dark</td>
+                        <td>Pluckerberg</td>
+                        <td>rollingindoh!@codeorelse.com</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">CTO</th>
+                        <td colspan="2">Mr. Robot</td>
+                        <td>hackingyourightmeow@codeorelse.com</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Head of Security</th>
+                        <td>Hulk</td>
+                        <td>Hogan</td>
+                        <td>buymymerch@hulkhoganswrestlingshop.com</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Complaint Department</th>
+                        <td colspan="2">Andre the Giant</td>
+                        <td>iusewhatgodgaveme@brainyquote.com</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+            </div>
+
+        </section>
+
+        <!-- get updates modal trigger -->
+        <section class="bg-light bg-gradient py-5">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="text-danger">Stay in the Loop</h2>
+                    <p class="lead">Get our latest updates and deals!</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <p class="text-muted my-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet accusamus natus aspernatur esse voluptatem est qui voluptas ut possimus? Eveniet nostrum architecto explicabo laudantium vel?
+                        </p>
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#updates-modal">Get Updates</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- modal for email list with form -->
+        <div class="modal fade" id="updates-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title">Stay Updated and Get Deals!</h5>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ut temporibus debitis corrupti iste, rerum natus nemo, cupiditate fuga esse et, distinctio sapiente sequi. Facilis.</p>
+                        <label for="email-list" class="form-label">Enter your email address:</label>
+                        <input type="email" class="form-control" id="email-list" placeholder="your email address">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-warning">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- offcanvas for "see our other programs" in hero section -->
+    <div class="offcanvas offcanvas-start bg-light" tabIndex="-1" id="sidebar" aria-labelledby="offcanvas-title">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvas-title">Other Popular Programs</h5>
+            <button class="btn btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="close"></button>
+        </div>
+        <div class="offcanvas-body">
+    
+            <a href="#" class="d-block mt-3">Quit Smoking...or Else</a>
+            <a href="#" class="d-block mt-3">Lose Weight...or Else</a>
+            <a href="#" class="d-block mt-3">Master a New Language...or Else</a>
+            <a href="#" class="d-block mt-3">Relax & Meditate...or Else</a>
+            <a href="#" class="d-block mt-3">Go Vegan...or Else</a>
+            <a href="#" class="d-block mt-3">Love Cats...or Else</a>
+            <small class="text-muted">(now free and mandatory for every citizen of Earth)</small>
+
+        </div>
+    </div>
+
+    <footer class="text-center text-muted fs-6 bg-altlight bg-gradient py-2 mt-5">
+        <p> codeOrElse.com &copy2053</p>
+    </footer>
+
+<!-- using Bootstrap 5, no need for jquery -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js" type="module"></script>
+    <script src="./script.js" ></script>
+</body>
+</html>
+
+
+<!-- Assignment links -->
+<!-- https://youtu.be/mJPDsrpdDt4 -->
+

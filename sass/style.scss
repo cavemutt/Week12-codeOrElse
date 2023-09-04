@@ -1,0 +1,30 @@
+// declare custom variable overrides
+$primary:#5979d9;
+$secondary: #97d3fb;
+$danger: #d04111;
+$warning:#f1ad69;
+$info:#76e0c5;
+$body-bg: #f4f4f4;
+$body-color: #151515;
+$light:#f6e8e0;
+
+// ***below didn't work(above works fine), needs research
+// to add your own custom variables
+// 1. create your own color theme map
+// 2. import the scss functions and variables files from bootstrap in this order
+// 3. merge custom theme map with original bootstrap theme map, overriding the original $theme-colors map
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-theme-colors: (
+    "altlight": #c4ebf8,
+    "altdark": #33a9d1
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+// import bootstrap to customize bootstrap variables
+@import '../node_modules/bootstrap/scss/bootstrap'
+
+// the !default sass statement after each bootstrap variable 

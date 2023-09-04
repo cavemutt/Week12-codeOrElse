@@ -1,0 +1,37 @@
+{
+  "newMembers": [
+    {
+      "fullname": "Gary Snuggles Fluffypants",
+      "email": "garebear@example.com",
+      "address": "123 Feline St., Catville, MA 01520",
+      "phone": "508-873-6509",
+      "username": "garebear",
+      "password": "*********",
+      "plan": "militant",
+      "goals": "to survive this bootcamp!",
+      "id": 1
+    },
+    {
+      "fullname": "Ruby Dube",
+      "email": "ruby@catswipe.com",
+      "address": "5 Kitty Way, Catville, MA 01520",
+      "phone": "212-555-2368",
+      "username": "ruby",
+      "password": "rube",
+      "plan": "starter",
+      "goals": "Just checking it out",
+      "id": 2
+    },
+    {
+      "fullname": "Anonymous",
+      "email": "weWillFindYou@everywhere.com",
+      "address": "no address given",
+      "phone": "no phone given",
+      "username": "",
+      "password": "",
+      "plan": "militant",
+      "goals": "to learn to code faster than humanly possible",
+      "id": 3
+    }
+  ]
+}
